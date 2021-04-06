@@ -53,8 +53,6 @@ def predict():
         # edit your code
         return render_template("cal-result.html", price=round(price_rtf(predicted_price[0])))
 
-       
-
     if request.method=='GET':
         return "this is house prediction api"
 
