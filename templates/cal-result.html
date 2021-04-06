@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title %} Find a House {% endblock %} {% block
+    content %}
+    <style>
+        .container {
+            margin-top: 3%;
+        }
+    </style>
+    <div class="container">
+      Your Estimated Price: {{ "{:,}".format(price) }} Baht
+      <h2><a href="\">go back to home page</a></h2>
+    </div>
+    {% endblock %}
+    

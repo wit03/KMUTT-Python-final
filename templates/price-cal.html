@@ -1,0 +1,49 @@
+{% extends "base.html" %} {% block title %} Estimate a House Price {% endblock %} {% block
+    content %}
+    <style>
+      .container {
+        margin-top: 3%;
+      }
+    </style>
+    <div class="container">
+      <form action="/api/predict" method='POST'>
+        <div class="mb-3" >
+            <label for="area" class="form-label"> พื้นที่รวม(ตร.ม) </label>
+            <input type="text" class="form-control" name="area" id="area" aria-describedby="area">
+        </div>
+        <div class="mb-3" >
+            <label for="bathrooms" class="form-label"> จำนวนห้องน้ำ </label>
+            <input type="text" class="form-control" name="bathrooms" id="bathrooms" aria-describedby="bathrooms">
+        </div>
+        <div class="mb-3" >
+            <label for="stories" class="form-label"> จำนวนชั้น </label>
+            <select class="form-control form-control-lg" name="stories" id="stories" aria-describedby="stories">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+        </div>
+        <div class="mb-3" >
+            <label for="airconditioning" class="form-label">จำนวน AC</label>
+            <input type="text" class="form-control" name="airconditioning" id="airconditioning" aria-describedby="airconditioning">
+        </div>
+        <div class="mb-3" >
+            <label for="parking" class="form-label">จำนวนที่จอดรถ</label>
+            <input type="text" class="form-control" name="parking" id="parking" aria-describedby="parking">
+        </div>
+        <div class="mb-3" >
+            <label for="prefarea" class="form-label"> มีบริเวณบ้าน </label>
+            
+            <select class="form-control form-control-lg" name="prefarea" id="prefarea" aria-describedby="prefarea">
+              <option value="1">มี</option>
+              <option value="0">ไม่มี</option>
+            </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+      </div>
+      {% endblock %}
+    </div>
+    
